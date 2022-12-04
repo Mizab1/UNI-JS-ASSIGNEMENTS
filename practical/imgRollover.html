@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <img src="smiley.png" onmouseover="change()" onmouseout="revert()" id="img1">
+        <img src="smiley.png" onmouseover="change()" onmouseout="revert()" id="img2">
+        <img src="smiley.png" onmouseover="change()" onmouseout="revert()" id="img3">
+        <script>
+            function change(){
+                event.srcElement.src = "sad.png"
+            }
+            function revert(){
+                event.srcElement.src = "smiley.png"
+            }
+        </script>
+    </body>
+</html>

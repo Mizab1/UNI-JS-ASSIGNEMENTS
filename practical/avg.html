@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <script>
+            function calcAvg(...marks){
+                let tmpSum = 0;
+                marks.forEach((value) => {
+                    tmpSum += value;
+                })
+                return tmpSum / arguments.length
+            }
+
+            console.log(calcAvg(1, 2, 3, 4, 5));
+        </script>
+    </body>
+</html>

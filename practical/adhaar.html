@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <form>
+            Name: <input type="text" name="name" id="name">
+            Adhaar: <input type="text" name="adhaar" id="adhaar" oninput="validate()">
+            <p id="error"></p>
+        </form>
+        <script>
+            function validate(){
+                console.log("test")
+                let adhaarNo = document.getElementById("adhaar").value;
+                let adhaarRegex = /[0-9]{4}-[0-9]{4}-[0-9]{4}/g;
+
+                if(adhaarRegex.test(adhaarNo)){
+                    document.getElementById('error').innerHTML = "Adhaar No is valid";
+                }else{
+                    document.getElementById('error').innerHTML = "Adhaar No is invalid";
+                }
+            }
+        </script>
+    </body>
+</html>

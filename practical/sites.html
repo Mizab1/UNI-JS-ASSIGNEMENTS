@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <form>
+            <select id="sites" onchange="redirect()">
+                <option>Google</option>
+                <option>MSBTE</option>
+                <option>Yahoo</option>
+            </select>
+        </form>
+        <script>
+            function redirect(){
+                let index = document.getElementById('sites').selectedIndex;
+                switch(index){
+                    case 0:
+                        return window.location.href = "http://www.google.com";
+                    case 1:
+                        return window.location.href = "https://msbte.org.in/";
+                    case 2:
+                        return window.location.href = "http://www.yahoo.com";
+                }
+                console.log(index)
+            }
+        </script>
+    </body>
+</html>

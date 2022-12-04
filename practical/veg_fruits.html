@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <form>
+            Fruits: <input type="radio" name="eatables" id="fruit">
+            Vegetable: <input type="radio" name="eatables" id="vegetable">
+
+            <select name="selectEatable" id="selectEatable"></select>
+            <input type="button" value="Submit" onclick="showEatables()">
+
+            <script defer>
+                function showEatables(){
+                    document.getElementById('selectEatable').options.length = 0;
+                    if(document.getElementById('fruit').checked){
+                        let fruits = ["Banana", "Mango", "Apple", "Kiwi"];
+                        let select = document.getElementById('selectEatable');
+
+                        for (let i = 0; i < 4; i++){
+                            let opt = document.createElement('option');
+                            opt.innerHTML = fruits[i];
+                            select.appendChild(opt);
+                        }
+                    }
+                    if(document.getElementById('vegetable').checked){
+                        let vegetables = ["Carrot", "Onion", "Tomato", "Potato"];
+                        let select = document.getElementById('selectEatable');
+
+                        for (let i = 0; i < 4; i++){
+                            let opt = document.createElement('option');
+                            opt.innerHTML = vegetables[i];
+                            select.appendChild(opt);
+                        }
+                    }
+                }
+                
+            </script>
+        </form>
+    </body>
+</html>

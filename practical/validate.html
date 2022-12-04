@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <form>
+            Name: <input type="text" name="name" id="name">
+            Email: <input type="text" name="email" id="email">
+            <input type="button" onclick="validate()" value="Submit">
+        </form>
+        <script defer>
+            function validate(){
+                let name = document.getElementById('name').value;
+                let email = document.getElementById('email').value;
+
+                let nameRegex = /[A-Za-z0-9]/;
+                let emailRegex = /[A-Za-z0-9\.]@[a-z\.]/
+                console.log(name);
+
+                if(nameRegex.test(name)){
+                    document.writeln("Name is valid");
+                }else{
+                    document.writeln("Name is not valid");
+                }
+
+                if(emailRegex.test(email)){
+                    document.writeln("Email is valid");
+                }else{
+                    document.writeln("Email is not valid");
+                }
+            }
+        </script>
+    </body>
+</html>

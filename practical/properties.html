@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <script>
+            function checkIP(ipAddress){
+                let regex = /[0-9]{3}\.[0-9]{3}\.[0-9]{1,3}\.[0-9]{1,3}/
+                if(regex.test(ipAddress))
+                    return "true"
+                else
+                    return "false"
+            }
+
+            let ip = "192.168.2.2"
+            console.log(checkIP(ip))
+        </script>
+    </body>
+</html>
